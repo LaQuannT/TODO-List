@@ -1,8 +1,11 @@
-// check that everything is working
-console.log('I am working!')
+import { createTodo } from './create-todos'
+import { storeTodos } from './store-todos'
 
-const containerEl = document.getElementById('container')
-const h1El = document.createElement('h1')
+let buffer = createTodo(
+  'Calculator',
+  'returns the sum of given math problems',
+  'today',
+  5
+)
 
-h1El.textContent = 'I am also working!'
-containerEl.appendChild(h1El)
+storeTodos(buffer)

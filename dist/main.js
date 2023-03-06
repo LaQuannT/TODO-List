@@ -1,1 +1,1 @@
-(()=>{console.log("I am working!");const e=document.getElementById("container"),n=document.createElement("h1");n.textContent="I am also working!",e.appendChild(n)})();
+(()=>{"use strict";var t,e,o;!function(t){const e=[];e.push(t),console.table(e)}((t="Calculator",e="returns the sum of given math problems",o="today",5,console.log({title:t,description:e,dueDate:o,priority:5}),{title:t,description:e,dueDate:o,priority:5}))})();
