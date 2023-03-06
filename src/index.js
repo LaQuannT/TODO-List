@@ -1,11 +1,24 @@
-import { createTodo } from './create-todos'
-import { storeTodos } from './store-todos'
+import { project } from './projects'
+import { storeProject } from './storage'
+import { createTodo } from './todos'
 
-let buffer = createTodo(
-  'Calculator',
-  'returns the sum of given math problems',
-  'today',
-  5
-)
+let calculator = project('calculator')
+let task = createTodo(
+    'Build add Function',
+    'Takes a set if numbers and returns the sum',
+    'today',
+    3
+  ),
+  task2 = createTodo(
+    'Build subtract function',
+    'subtacts number by a number',
+    'tomorrow',
+    2,
+    true
+  )
+calculator.addTodo(task)
+calculator.addTodo(task2)
 
-storeTodos(buffer)
+storeProject(calculator)
+
+calculator.print()
