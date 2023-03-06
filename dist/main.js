@@ -1,0 +1,1 @@
+(()=>{console.log("I am working!");const e=document.getElementById("container"),n=document.createElement("h1");n.textContent="I am also working!",e.appendChild(n)})();
