@@ -4,10 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/5609c5f1a8.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="main.js" defer></script>
     <title>TODO List</title>
   </head>
   <body>
-    <div id="container"></div>
+    <div id="container">
+      <header>
+        <h1 class="app-name">TODO</h1>
+        <i class="fa-solid fa-bars"></i>
+      </header>
+      <nav class="nav-options">
+        <h2 class="nav-title">Home</h2>
+        <div class="nav-list-container">
+          <ul class="nav-list">
+            <li>All Task</li>
+            <li>Today</li>
+            <li>Important</li>
+          </ul>
+        </div>
+        <h2 class="nav-title">Projects</h2>
+        <div class="nav-list-container">
+          <ul class="nav-list">
+            <li>Example</li>
+            <li>Example</li>
+            <li>Example</li>
+          </ul>
+          <form action="">
+            <button type="submit">+</button>
+            <input
+              class="project-input"
+              type="text"
+              placeholder="Add Project"
+            />
+          </form>
+        </div>
+      </nav>
+      <div class="all-task"></div>
+    </div>
   </body>
 </html>

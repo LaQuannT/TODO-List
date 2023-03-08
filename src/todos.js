@@ -1,9 +1,6 @@
-export function createTodo(
-  name,
-  description,
-  dueDate,
-  priority = 5,
-  completed = false
-) {
-  return { name, description, dueDate, priority, completed }
+export function createTodo(name, dueDate, priority = 5, completed = false) {
+  return { name, dueDate, priority, completed }
+}
+export const addTodos = (project, todo) => {
+  project.todos.push(todo)
 }

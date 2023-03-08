@@ -1,0 +1,75 @@
+:root {
+  --base-padding: 20px;
+  --tab: 16px;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(2, auto) 1fr;
+  background-color: whitesmoke;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: 2px black solid;
+  padding: var(--base-padding);
+}
+
+.nav-options {
+  height: fit-content;
+  padding: var(--base-padding);
+  background-color: white;
+  border-bottom: 2px black outset;
+}
+
+.nav-title {
+  border-bottom: 1px black dotted;
+  padding-top: var(--tab);
+}
+.nav-list > li {
+  padding: var(--tab) var(--tab) 0;
+}
+
+form {
+  padding-top: var(--tab);
+}

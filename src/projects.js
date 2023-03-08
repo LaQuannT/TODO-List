@@ -1,9 +1,10 @@
-export const project = (name) => {
+import { allProjects } from './index'
+
+export const project = (name, description) => {
   const todos = []
-  return {
-    name,
-    addTodo: (obj) => todos.push(obj),
-    removeTodo: (i) => todos.splice(i, 0),
-    print: () => console.table(todos),
-  }
+  return { name, description, todos }
+}
+
+export const addProject = (project) => {
+  allProjects.push(project)
 }

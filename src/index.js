@@ -1,24 +1,12 @@
-import { project } from './projects'
-import { storeProject } from './storage'
-import { createTodo } from './todos'
+import { project, addProject } from './projects'
+import { createTodo, addTodos } from './todos'
 
-let calculator = project('calculator')
-let task = createTodo(
-    'Build add Function',
-    'Takes a set if numbers and returns the sum',
-    'today',
-    3
-  ),
-  task2 = createTodo(
-    'Build subtract function',
-    'subtacts number by a number',
-    'tomorrow',
-    2,
-    true
-  )
-calculator.addTodo(task)
-calculator.addTodo(task2)
+export const allProjects = []
 
-storeProject(calculator)
+let calculator = project('calculator', 'computes math squations')
+let task = createTodo('Build add Function', 'today', 3),
+  task2 = createTodo('Build subtract function', 'tomorrow', 2, true)
 
-calculator.print()
+addTodos(calculator, task)
+addTodos(calculator, task2)
+addProject(calculator)
