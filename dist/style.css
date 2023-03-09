@@ -91,19 +91,33 @@ img {
   align-items: center;
   border-bottom: 1px var(--clr-hdr) solid;
 }
+li {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  margin: 10px 0;
+  padding: 18px 10px;
+  font-size: 1.1rem;
+}
+
+.list-actions {
+  display: inherit;
+  gap: 10px;
+}
 
 .main-content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   display: inherit;
-  grid-template-rows: 175px 1fr;
-  padding: 0 20px;
+  grid-template-rows: 100px 1fr;
+  padding: 0 42px;
 }
 
 .content-hdr {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: left;
   border-bottom: 2px var(--clr-hdr) solid;
 }
 
