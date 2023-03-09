@@ -14,37 +14,46 @@
   </head>
   <body>
     <div id="container">
-      <header>
-        <h1 class="app-name">TODO</h1>
-        <i class="fa-solid fa-bars"></i>
+      <header class="pg-header">
+        <i class="fa-solid fa-list-check fa-xl"></i>
+        <h1 class="app-name">To-Do</h1>
       </header>
-      <nav class="nav-options">
-        <h2 class="nav-title">Home</h2>
-        <div class="nav-list-container">
-          <ul class="nav-list">
-            <li>All Task</li>
-            <li>Today</li>
-            <li>Important</li>
-          </ul>
+      <div class="sidebar">
+        <nav class="filters">
+          <div class="sidebar-item" id="item-all">
+            <i class="fa-solid fa-inbox"></i>
+            <span class="item-txt">Task</span>
+          </div>
+          <div class="sidebar-item" id="item-today">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span class="item-txt">Today</span>
+          </div>
+          <div class="sidebar-item" id="item-week">
+            <i class="fa-solid fa-calendar-week"></i>
+            <span class="item-txt">Week</span>
+          </div>
+          <div class="sidebar-item" id="item-important">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span class="item-txt">Important</span>
+          </div>
+        </nav>
+        <div class="all-projects">
+          <div class="project-title">
+            <h2 class="title">Projects</h2>
+            <i class="fa-regular fa-square-plus"></i>
+          </div>
         </div>
-        <h2 class="nav-title">Projects</h2>
-        <div class="nav-list-container">
-          <ul class="nav-list">
-            <li>Example</li>
-            <li>Example</li>
-            <li>Example</li>
-          </ul>
-          <form action="">
-            <button type="submit">+</button>
-            <input
-              class="project-input"
-              type="text"
-              placeholder="Add Project"
-            />
-          </form>
+      </div>
+      <div class="main-content">
+        <div class="content-hdr">
+          <h2 class="content-title">Task</h2>
         </div>
-      </nav>
-      <div class="all-task"></div>
+        <div class="content-bdy"></div>
+        <div class="add-task">
+          <i class="fa-regular fa-square-plus"></i>
+          <span class="add-task-txt">Add Task</span>
+        </div>
+      </div>
     </div>
   </body>
 </html>
