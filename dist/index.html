@@ -19,6 +19,7 @@
         <h1 class="app-name">To-Do</h1>
       </header>
       <div class="sidebar">
+        <!--Sidebar nav filters-->
         <nav class="filters">
           <div class="sidebar-item" id="item-all">
             <i class="fa-solid fa-inbox"></i>
@@ -37,6 +38,8 @@
             <span class="item-txt">Important</span>
           </div>
         </nav>
+
+        <!--Sidebar project content -->
         <div class="all-projects">
           <div class="project-title">
             <h2 class="title">Projects</h2>
@@ -52,7 +55,7 @@
             </li>
             <li>
               Clean
-              <span class="project-actions">
+              <span class="list-actions">
                 <i class="fa-solid fa-pen"></i>
                 <i class="fa-solid fa-trash"></i>
               </span>
@@ -60,6 +63,8 @@
           </ul>
         </div>
       </div>
+
+      <!--Main content - displays task-->
       <div class="main-content">
         <div class="content-hdr">
           <h2 class="content-title">Task</h2>
@@ -96,13 +101,17 @@
         </div>
       </div>
     </div>
+
+    <!--Modal elemenets-->
     <div class="modal">
+      <!--Modal content for Project form-->
       <div id="project-modal" class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title">Add Project</h2>
           <span class="close">&times;</span>
         </div>
         <div class="modal-body">
+          <!--Project Form-->
           <form action="#" id="project-form">
             <div class="questions">
               <label for="project-name">Name</label>
@@ -116,12 +125,15 @@
           </button>
         </div>
       </div>
+
+      <!--Modal content for TO-DO form-->
       <div id="task-modal" class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title">Add Task</h2>
           <span class="close">&times;</span>
         </div>
         <div class="modal-body">
+          <!--TO-DO Form -->
           <form action="" id="task-form">
             <div class="questions">
               <label for="task-title">Name</label>

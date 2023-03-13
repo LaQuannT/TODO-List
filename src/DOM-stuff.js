@@ -1,25 +1,79 @@
-export const projectAddBtn = document.querySelector(
-  '.project-title > .fa-square-plus'
-)
-const modal = document.querySelector('.modal')
-const projectModal = document.querySelector('#project-modal')
-export const exit = document.querySelector('.close')
-const liEl = document.createElement('li')
-const projectList = document.querySelector('.project-list')
+import { allProjects } from '.'
+import { arrAdd, arrDel } from './utility-functions'
+import { createProject } from './projects'
 
-export function renderModal() {
-  ;(modal.style.display = 'block'), (projectModal.style.display = 'block')
+// Short hand functions
+function qs(selector, parent = document) {
+  return parent.querySelector(selector)
 }
 
-export function closeModal() {
-  modal.style.display = 'none'
-  projectModal.style.display = 'none'
+function qsa(selector, parent = document) {
+  return [...parent.querySelectorAll(selector)]
 }
 
-export function renderPro(name) {
-  liEl.innerHTML = `${name}               <span class="list-actions">
-   <i class="fa-solid fa-pen"></i>
-   <i class="fa-solid fa-trash"></i>
- </span>`
-  projectList.appendChild(liEl)
+function addEvent(type, selector, callback, parent = document) {
+  parent.addEventListener(type, (e) => {
+    if (e.target.matches(selector)) callback(e)
+  })
 }
+
+function createElements(type, options = {}) {
+  const element = document.createElement(type)
+  Object.entries(options).forEach(([key, value]) => {
+    if (key === 'html') {
+      element.innerHTML = value
+      return
+    }
+    if (key === 'text') {
+      element.textContent = value
+      return
+    }
+
+    element.setAttribute(key, value)
+  })
+  return element
+}
+
+// global selectors
+const modal = qs('.modal')
+const projectModal = qs('#project-modal')
+
+// modal logic
+export function showModal() {
+  addEvent('click', '.project-title > .fa-square-plus', (e) => {
+    modal.style.display = 'block'
+    projectModal.style.display = 'block'
+  })
+}
+
+export function hideModal() {
+  addEvent('click', '.close', (e) => {
+    modal.style.display = 'none'
+    projectModal.style.display = 'none'
+  })
+}
+
+// project list logic
+export function addProject() {
+  let projectName = qs('#project-name')
+  addEvent('click', '#submit-project', (e) => {
+    let project = createProject(projectName.value)
+    e.preventDefault(),
+      arrAdd(allProjects, project),
+      addProjectItem(projectName.value)
+  })
+}
+
+function addProjectItem(str) {
+  const projectList = qs('.project-list')
+  const element = createElements('li', {
+    html: `${str}
+   <span class="list-actions">
+    <i class="fa-solid fa-pen"></i>
+    <i class="fa-solid fa-trash"></i>
+  </span>`,
+  })
+  projectList.appendChild(element)
+}
+
+function delProject() {}

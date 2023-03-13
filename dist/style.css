@@ -113,6 +113,9 @@ li {
   gap: 10px;
 }
 
+.list-actions > i:hover {
+  color: var(--clr-hdr);
+}
 .main-content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
