@@ -1,15 +1,17 @@
 @import url('https://fonts.cdnfonts.com/css/tt-alientz-trial-var');
+@import url('https://fonts.cdnfonts.com/css/sawaizumi-sans');
 
 :root {
   --clr-hdr: #dd4c3d;
   --clr-sdbr: #e4e4e4;
   --fonts: 'TT Alientz Trial Var', sans-serif;
+  --fonts-alt: 'Sawaizumi Sans', sans-serif;
 }
 
 html {
   box-sizing: border-box;
   font-size: 16px;
-  font-family: var(--fonts);
+  font-family: var(--fonts-alt);
 }
 
 *,
@@ -101,6 +103,11 @@ li {
   font-size: 1.1rem;
 }
 
+.project-title > .fa-square-plus:hover {
+  cursor: pointer;
+  color: var(--clr-hdr);
+}
+
 .list-actions {
   display: inherit;
   gap: 10px;
@@ -126,4 +133,58 @@ li {
   background-color: var(--clr-sdbr);
   border-radius: 10px;
   padding: 10px 16px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#project-modal,
+#task-modal {
+  display: none;
+}
+.modal-content {
+  background-color: var(--clr-sdbr);
+  margin: 25% auto;
+  border: 1px solid var(--clr-hdr);
+  border-radius: 10px;
+  width: 80%;
+  padding: 20px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--clr-hdr);
+}
+
+.close {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.close:hover {
+  cursor: pointer;
+  color: var(--clr-hdr);
+}
+.modal-body {
+  margin: 16px 0;
+}
+
+.modal-body > form {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+}
+
+.modal-footer {
+  text-align: center;
 }

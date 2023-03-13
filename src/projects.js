@@ -1,10 +1,6 @@
 import { allProjects } from './index'
 
-export const project = (name, description) => {
+export const project = (name) => {
   const todos = []
-  return { name, description, todos }
-}
-
-export const addProject = (project) => {
-  allProjects.push(project)
+  return { name, todos }
 }

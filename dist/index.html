@@ -96,5 +96,63 @@
         </div>
       </div>
     </div>
+    <div class="modal">
+      <div id="project-modal" class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Add Project</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form action="#" id="project-form">
+            <div class="questions">
+              <label for="project-name">Name</label>
+              <input type="text" id="project-name" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" form="project-form">Submit</button>
+        </div>
+      </div>
+      <div id="task-modal" class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Add Task</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form action="" id="task-form">
+            <div class="questions">
+              <label for="task-title">Name</label>
+              <input type="text" id="task-title" />
+            </div>
+            <div class="questions">
+              <label for="date">Due Date</label>
+              <input type="date" id="date" />
+            </div>
+            <div class="questions">
+              <label for="priority">Priority level:</label>
+              <select name="priority-levels" id="priority-levels">
+                <option value="high">high</option>
+                <option value="normal">normal</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+            <div class="questions">
+              <textarea
+                aria-label="description"
+                name="description"
+                id="description"
+                cols="25"
+                rows="3"
+                placeholder="Short descripton..."
+              ></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" form="task-form">Submit</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
