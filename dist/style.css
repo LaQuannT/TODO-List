@@ -108,6 +108,13 @@ li {
   color: var(--clr-hdr);
 }
 
+.del:hover {
+  color: var(--clr-hdr);
+  font-size: 1.3rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
 .list-actions {
   display: inherit;
   gap: 10px;

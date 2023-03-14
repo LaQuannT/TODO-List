@@ -20,6 +20,10 @@ function addEvent(type, selector, callback, parent = document) {
 function createElements(type, options = {}) {
   const element = document.createElement(type)
   Object.entries(options).forEach(([key, value]) => {
+    if (key === 'class') {
+      element.classList.add(value)
+      return
+    }
     if (key === 'html') {
       element.innerHTML = value
       return
@@ -68,12 +72,20 @@ function addProjectItem(str) {
   const projectList = qs('.project-list')
   const element = createElements('li', {
     html: `${str}
-   <span class="list-actions">
-    <i class="fa-solid fa-pen"></i>
-    <i class="fa-solid fa-trash"></i>
-  </span>`,
+    <span class="del">&times;</span>`,
+    'data-key': str,
   })
   projectList.appendChild(element)
 }
 
-function delProject() {}
+export function delProject() {
+  addEvent(
+    'click',
+    '.del',
+    (e) => {
+      arrDel(allProjects, 'name', e.target.closest('li').dataset['key'])
+      e.target.closest('li').remove()
+    },
+    qs('.project-list')
+  )
+}
