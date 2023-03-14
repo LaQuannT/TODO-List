@@ -145,6 +145,12 @@ li {
   padding: 10px 16px;
 }
 
+.add-task:hover {
+  background-color: var(--clr-hdr);
+  color: var(--clr-sdbr);
+  cursor: pointer;
+}
+
 .modal {
   display: none;
   position: fixed;

@@ -1,9 +1,18 @@
-import { addProject, delProject, hideModal, showModal } from './DOM-stuff'
+import {
+  addProject,
+  addTask,
+  delProject,
+  hideModal,
+  showProjectModal,
+  showTaskModel,
+} from './DOM-stuff'
 
 // Stores the project elements
 export const allProjects = []
 
-showModal()
+showProjectModal()
+showTaskModel()
 hideModal()
 addProject()
 delProject()
+addTask()

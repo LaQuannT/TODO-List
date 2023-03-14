@@ -88,10 +88,7 @@
               </div>
             </li>
           </ul>
-          <div class="add-task">
-            <i class="fa-regular fa-square-plus"></i>
-            <span class="add-task-txt">Add Task</span>
-          </div>
+          <div class="add-task">&plus; Add Task</div>
         </div>
       </div>
     </div>
@@ -130,6 +127,10 @@
           <!--TO-DO Form -->
           <form action="" id="task-form">
             <div class="questions">
+              <label for="tasks-project">Project</label>
+              <input type="text" id="tasks-project" />
+            </div>
+            <div class="questions">
               <label for="task-title">Name</label>
               <input type="text" id="task-title" />
             </div>
@@ -158,7 +159,9 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" form="task-form">Submit</button>
+          <button type="submit" form="task-form" id="submit-task">
+            Submit
+          </button>
         </div>
       </div>
     </div>

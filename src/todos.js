@@ -1,9 +1,9 @@
 export function createTodo(
   name,
-  description,
   dueDate,
   priority = 'High',
+  description,
   completed = false
 ) {
-  return { name, description, dueDate, priority, completed }
+  return { name, dueDate, priority, description, completed }
 }
